@@ -60,14 +60,16 @@ python app.py
 cd frontend
 npm install
 npm run dev
-The react app should be running on `http://localhost:5173`.
+The react app should be running on `http://localhost:5173`
+```
+
 ---
 ## **Design Decisions:**
 * **Why this concept?** I chose this concept because it aligns with the growing need for financial literacy, especially among students from 1st-generation and low-income households that are new to managing their finances. I considered alternatives such as creating a static web page to provide insights for financial tips on purchases, but decided that this data set dashboard would be more impactful in supporting with long-term spending behavior and visualizations.
 * **Tradeoffs:** Performance concerns may arise with large datasets (100,000+ rows) due to the Pandas being in memory. It's a cost-effective alternative for introductory budget/spending platforms in comparison to purchasing financial management software for bookkeeping and tracking investments.
 * **Security/Privacy:** Long-term data is not stored on the app and is only used to process insights for the user and is deleted after.
 * **Ops:** Logs are captured for errors in the Flask app; the app could benefit from scaling in case of high traffic, and the app may have performance issues with large CSV files.
-```
+
 
 ---
 
