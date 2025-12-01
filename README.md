@@ -146,7 +146,17 @@ npm run dev
 ### **Sample outputs**
 ![Demo1](./assets/demo1.png)
 ![Demo2](./assets/demo2.png)
+* **Validation** Unit tests for backend functionality and sample outputs were validated with manual calculation checks.
 
+## **Whats Next**
+### ** Planned improvements:** 
+* Implementation of user authentication to save personal financial data
+* More graphics and UI improvements
+* Add a recommendation engine or chat bot to personalize financial advice
+* STRETCH: Enhance the forecasting model for ARIMA or LSTM models for better accuracy
+
+## **Links**
+GitHub Repo: 
   
 ### **Analyze Your Spending**
 
