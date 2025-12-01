@@ -1,10 +1,10 @@
-# **AI Spending Dashboard**
+# **AI Spending Dashboard: Executive Summary**
 
 The problem I'm solving is the financial literacy crisis among Americans regarding budgeting and managing personal finances. This dashboard is designed to help students build financial management habits by setting financial goals and tracking spending. This project is an interactive dashboard that analyzes your spending habits using an AI-powered backend built with Flask and a React frontend. It processes transaction data (CSV format) and provides insight into users' financial behavior. This dashboard helps you visualize your total spend, forecast future expenses, and receive personalized insights. It's designed to financial literacy gap among young adults by providing an interactive tool for budgeting and financial planning. It can identify where your money is going and give recommendations for how to allocate funds more wisely among different spending categories.
 
 ---
 
-## **Features:**
+## **System Overview:**
 * **Course Concept:** Infrastructure: Cloud Services / APIs / Containers - Docker
 * **Architecture Diagram:** Here is the architecture diagram that shows how the components of the AI Spending Dashboard interact:![Architecture Diagram](./assets/architecture-diagram.png)
 * **Data/Models/Services:** Upload a CSV file with your recent transaction data (Date, Merchant, Category, Amount) with a maximum of 10,000 rows. This project is licensed under the MIT License. The CSV file should be formatted with the following columns: 
@@ -34,26 +34,23 @@ The problem I'm solving is the financial literacy crisis among Americans regardi
   * Docker (containerizing both frontend and backend)
 ---
 
-## **Setup & Installation**
+## **How to Run (Local): Build**
 
 1. Install **Docker** and **Docker Desktop**:
 
    * Download from [Docker](https://www.docker.com/products/docker-desktop).
    * Follow the installation instructions based on your OS.
-
-2. Install **Node.js** and **npm** (for React frontend):
-
-   * Download from [Node.js](https://nodejs.org/).
-
-3. Install **Python 3.x** (for Flask backend):
-
-   * Download from [Python](https://www.python.org/downloads/).
-
----
+```bash
+# build
+docker build -t ai-spending-dashboard .
+# run
+docker run --rm -p 8080:8080 --env-file .env.example ai-spending-dashboard
+# health check 
+curl http://localhost:8080/health
 
 ### **1. Clone the Repository**
 
-Clone this repository to your local machine using Git:
+Clone this repository to your local machine:
 
 ```bash
 git clone https://github.com/xumadison/ai-spending-dashboard.git
@@ -139,18 +136,12 @@ npm run dev
 3. Open your browser and go to `http://localhost:5173` to interact with the dashboard!
 
 ---
-
-## **Usage**
-
-### **Upload Your CSV File**
-
-The dashboard allows you to upload a CSV file containing your transaction data. The CSV should have the following columns:
-
-* **Date**: The transaction date (in `YYYY-MM-DD` format)
-* **Merchant**: The name of the merchant where the transaction occurred
-* **Category**: The spending category (e.g., Groceries, Entertainment, Travel)
-* **Amount**: The amount spent on the transaction (numeric)
-
+## **Design Decisions:**
+* **Why this concept?** I chose this concept because it aligns with the growing need for financial literacy, especially among students from 1st-generation and low-income households that are new to managing their finances. I considered alternatives such as creating a static web page to provide insights for financial tips on purchases, but decided that this data set dashboard would be more impactful in supporting with long-term spending behavior and visualizations.
+* **Tradeoffs:** Performance concerns may arise with large datasets (100,000+ rows) due to the Pandas being in memory. It's a cost-effective alternative for introductory budget/spending platforms in comparison to purchasing financial management software for bookkeeping and tracking investments.
+* **Security/Privacy:** Long-term data is not stored on the app and is only used to process insights for the user and is deleted after.
+* **Ops:** Logs are captured for errors in the Flask app; the app could benefit from scaling in case of high traffic, and the app may have performance issues with large CSV files.
+  
 ### **Analyze Your Spending**
 
 Once the file is uploaded, the dashboard will:
