@@ -80,7 +80,7 @@ The react app should be running on `http://localhost:5173`.
 ---
 
 ## **Whats Next**
-### ** Planned improvements:** 
+### **Planned improvements:** 
 * Implementation of user authentication to save personal financial data
 * More graphics and UI improvements
 * Add a recommendation engine or chat bot to personalize financial advice
