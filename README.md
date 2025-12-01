@@ -67,6 +67,7 @@ The react app should be running on `http://localhost:5173`.
 * **Tradeoffs:** Performance concerns may arise with large datasets (100,000+ rows) due to the Pandas being in memory. It's a cost-effective alternative for introductory budget/spending platforms in comparison to purchasing financial management software for bookkeeping and tracking investments.
 * **Security/Privacy:** Long-term data is not stored on the app and is only used to process insights for the user and is deleted after.
 * **Ops:** Logs are captured for errors in the Flask app; the app could benefit from scaling in case of high traffic, and the app may have performance issues with large CSV files.
+```
 
 ---
 
