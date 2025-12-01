@@ -1,0 +1,81 @@
+/* -------------------------------------- */
+/* Google Fonts                           */
+/* -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* -------------------------------------- */
+/* Cold Brew Bloom Theme                  */
+/* -------------------------------------- */
+:root {
+  --cream: #f0eeeb;
+  --lavender: #d6cfd0;
+  --mauve: #b9a8a4;
+  --cocoa: #8a6d66;
+  --smoky: #5f4d49;
+  --coldbrew: #2e2322;
+
+  --card-bg: #ffffff;
+  --radius: 14px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* -------------------------------------- */
+/* Reset                                  */
+/* -------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--cream);
+  color: var(--coldbrew);
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* -------------------------------------- */
+/* Typography                             */
+/* -------------------------------------- */
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--coldbrew);
+}
+
+p {
+  color: var(--smoky);
+}
+
+/* -------------------------------------- */
+/* Buttons                                */
+/* -------------------------------------- */
+button {
+  background: var(--cocoa);
+  color: white;
+  padding: 0.75rem 1.4rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: var(--smoky);
+  transform: translateY(-2px);
+}
+
+/* -------------------------------------- */
+/* File Input                             */
+/* -------------------------------------- */
+input[type="file"] {
+  background: white;
+  border: 1px solid var(--lavender);
+  padding: 10px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  width: 100%;
+}

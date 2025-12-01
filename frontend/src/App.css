@@ -1,0 +1,137 @@
+/* -----------------------------------------------------------
+   GLOBAL STYLES
+----------------------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #F8F8F7; /* Soft white */
+  color: #2e2322; /* Deep coffee brown */
+}
+
+/* Header serif font */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2e2322; /* Darkest brown */
+}
+
+/* Light olive line accents */
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #5F6D3A; /* Olive accent */
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+/* -----------------------------------------------------------
+   LAYOUT WRAPPER
+----------------------------------------------------------- */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* -----------------------------------------------------------
+   UPLOAD + BUTTON
+----------------------------------------------------------- */
+.upload-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.upload-row input[type="file"] {
+  padding: 6px;
+  border: 1px solid #d6cfd0;
+  border-radius: 6px;
+  background: #fff;
+}
+
+button {
+  padding: 10px 18px;
+  background: #5F6D3A; /* Olive green */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.15s ease;
+}
+
+button:hover {
+  background: #363d21; /* Deep olive */
+}
+
+/* -----------------------------------------------------------
+   BUBBLE CARDS (Bubble Style #1)
+----------------------------------------------------------- */
+.card {
+  background: #FFFFFF;
+  border: 2px solid #d6cfd0; /* Frosted Lavender border */
+  border-radius: 14px; /* Round bubble */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(90, 80, 80, 0.08); /* soft brown-ish shadow */
+}
+
+/* Title inside card */
+.card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #5f4d49; /* Smoky Bean */
+}
+
+/* Metric number */
+.metric-value {
+  font-size: 1.35rem;
+  margin-top: 6px;
+  font-weight: bold;
+  color: #2e2322; /* Dark coffee */
+}
+
+/* -----------------------------------------------------------
+   GRID LAYOUTS FOR METRICS
+----------------------------------------------------------- */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* -----------------------------------------------------------
+   LISTS FOR MONTH + CATEGORY
+----------------------------------------------------------- */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e4e4e2;
+  font-size: 0.95rem;
+}
+
+.list-item:nth-child(even) {
+  background: #f0eeeb; /* Clouded cream stripe */
+}
+
+.list-label {
+  font-weight: 500;
+}
+
+.list-value {
+  font-weight: 600;
+  color: #5f4d49;
+}
+
+/* Insight paragraph */
+.insight-text {
+  margin-top: 12px;
+  line-height: 1.55;
+  color: #2e2322;
+  background: #f0eeeb;
+  border-left: 4px solid #5F6D3A;
+  padding: 14px 16px;
+  border-radius: 8px;
+}
