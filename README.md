@@ -156,7 +156,7 @@ npm run dev
 * STRETCH: Enhance the forecasting model for ARIMA or LSTM models for better accuracy
 
 ## **Links**
-GitHub Repo: 
+GitHub Repo: https://github.com/xumadison/ai-spending-dashboard.git
   
 ### **Analyze Your Spending**
 
