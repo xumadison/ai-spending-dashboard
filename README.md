@@ -7,11 +7,11 @@ The problem I'm solving is the financial literacy crisis among Americans regardi
 ## **Features:**
 * **Course Concept:** Infrastructure: Cloud Services / APIs / Containers - Docker
 * **Architecture Diagram:** Here is the architecture diagram that shows how the components of the AI Spending Dashboard interact:![Architecture Diagram](./assets/architecture-diagram.png)
-* **Upload CSV:** Upload a CSV file with your recent transaction data (Date, Merchant, Category, Amount).
-* **Total Spend:** View your total spending from the uploaded file.
-* **Forecasting:** Get a forecast for the next month's spending based on historical data.
-* **By Category & By Month:** Breakdown of spending by category and by month.
-* **Insight:** Receive personalized insights about your spending trends.
+* **Data/Models/Services:** Upload a CSV file with your recent transaction data (Date, Merchant, Category, Amount) with a maximum of 10,000 rows. This project is licensed under the MIT License. The CSV file should be formatted with the following columns: 
+* **Date**: The transaction date (in `YYYY-MM-DD` format)
+* **Merchant**: The name of the merchant where the transaction occurred
+* **Category**: The spending category (e.g., Groceries, Entertainment, Travel)
+* **Amount**: The amount spent on the transaction (numeric)
 
 ---
 
@@ -20,7 +20,6 @@ The problem I'm solving is the financial literacy crisis among Americans regardi
 * **Frontend to visualize:**
 
   * React
-  * Vite (for fast development and bundling)
   * CSS for styling (custom styles focusing on a minimalist design)
 
 * **Backend to process:**
@@ -28,7 +27,7 @@ The problem I'm solving is the financial literacy crisis among Americans regardi
   * Flask API (Python web framework)
   * Gunicorn (WSGI server for Flask)
   * Pandas (for processing CSV data)
-  * Custom logic for analyzing spending trends
+  * Logic for analyzing spending trends
 
 * **Deployment:**
 
@@ -160,8 +159,3 @@ Once the file is uploaded, the dashboard will:
 * **Break down** your spending by **category** and **month**.
 * **Forecast** your spending for the next month based on current trends.
 * Provide **personalized insights** on your spending habits.
-
-
-## **License**
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
