@@ -47,94 +47,20 @@ docker build -t ai-spending-dashboard .
 docker run --rm -p 8080:8080 --env-file .env.example ai-spending-dashboard
 # health check 
 curl http://localhost:8080/health
-
-### **1. Clone the Repository**
-
-Clone this repository to your local machine:
-
-```bash
+# clone the repository
 git clone https://github.com/xumadison/ai-spending-dashboard.git
 cd ai-spending-dashboard
-```
-
-### **2. Backend Setup**
-
-1. Navigate to the backend folder (usually where your `app.py` file is):
-
-```bash
+# backend setup
 cd backend
-```
-
-2. **Create a virtual environment** and activate it:
-
-   * On **Windows**:
-
-     ```bash
-     python -m venv venv
-     .\venv\Scripts\activate
-     ```
-
-   * On **macOS/Linux**:
-
-     ```bash
-     python3 -m venv venv
-     source venv/bin/activate
-     ```
-
-3. **Install the required Python packages:**
-
-```bash
+python -m venv venv
+.\venv\Scripts\activate
 pip install -r requirements.txt
-```
-
-4. **Run the Flask app locally:**
-
-```bash
 python app.py
-```
-
-Your Flask app should now be running on `http://localhost:8080`.
-
-### **3. Frontend Setup**
-
-1. Navigate to the frontend folder (usually where your `src` and `public` directories are):
-
-```bash
+# frontend setup
 cd frontend
-```
-
-2. **Install required dependencies:**
-
-```bash
 npm install
-```
-
-3. **Start the React development server:**
-
-```bash
 npm run dev
-```
-
-The React app should now be running on `http://localhost:5173`.
-
----
-
-### **4. Running Together**
-
-1. Start the Flask backend using:
-
-```bash
-python app.py
-```
-
-2. Start the React frontend using:
-
-```bash
-npm run dev
-```
-
-3. Open your browser and go to `http://localhost:5173` to interact with the dashboard!
-
+The react app should be running on `http://localhost:5173`.
 ---
 ## **Design Decisions:**
 * **Why this concept?** I chose this concept because it aligns with the growing need for financial literacy, especially among students from 1st-generation and low-income households that are new to managing their finances. I considered alternatives such as creating a static web page to provide insights for financial tips on purchases, but decided that this data set dashboard would be more impactful in supporting with long-term spending behavior and visualizations.
@@ -142,11 +68,15 @@ npm run dev
 * **Security/Privacy:** Long-term data is not stored on the app and is only used to process insights for the user and is deleted after.
 * **Ops:** Logs are captured for errors in the Flask app; the app could benefit from scaling in case of high traffic, and the app may have performance issues with large CSV files.
 
+---
+
 ## **Results & Evaluation**
 ### **Sample outputs**
 ![Demo1](./assets/demo1.png)
 ![Demo2](./assets/demo2.png)
 * **Validation** Unit tests for backend functionality and sample outputs were validated with manual calculation checks.
+
+---
 
 ## **Whats Next**
 ### ** Planned improvements:** 
@@ -155,14 +85,8 @@ npm run dev
 * Add a recommendation engine or chat bot to personalize financial advice
 * STRETCH: Enhance the forecasting model for ARIMA or LSTM models for better accuracy
 
+---
+
 ## **Links**
 GitHub Repo: https://github.com/xumadison/ai-spending-dashboard.git
   
-### **Analyze Your Spending**
-
-Once the file is uploaded, the dashboard will:
-
-* Display the **total spend** from the uploaded data.
-* **Break down** your spending by **category** and **month**.
-* **Forecast** your spending for the next month based on current trends.
-* Provide **personalized insights** on your spending habits.
