@@ -8,10 +8,10 @@ The problem I'm interested in solving is the financial literacy crisis among Ame
 * **Course Concept:** Infrastructure: Cloud Services / APIs / Containers - Docker
 * **Architecture Diagram:** Here is the architecture diagram that shows how the components of the AI Spending Dashboard interact:![Architecture Diagram](./assets/architecture-diagram.png)
 * **Data/Models/Services:** Upload a CSV file with your recent transaction data (Date, Merchant, Category, Amount) with a maximum of 10,000 rows. This project is licensed under the MIT License. The CSV file should be formatted with the following columns: 
-* **Date**: The transaction date (in `YYYY-MM-DD` format)
-* **Merchant**: The name of the merchant where the transaction occurred
-* **Category**: The spending category (e.g., Groceries, Entertainment, Travel)
-* **Amount**: The amount spent on the transaction (numeric)
+ * **Date**: transaction date (YYYY-MM-DD)
+ * **Merchant**: The name of the merchant where the transaction occurred
+ * **Category**: The spending category (Groceries, Entertainment, Travel, etc)
+ * **Amount**: The amount spent on the transaction
 
 ---
 
