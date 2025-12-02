@@ -8,38 +8,21 @@ The problem I'm interested in solving is the financial literacy crisis among Ame
 * **Course Concept:** Infrastructure: Cloud Services / APIs / Containers - Docker
 * **Architecture Diagram:** Here is the architecture diagram that shows how the components of the AI Spending Dashboard interact:![Architecture Diagram](./assets/architecture-diagram.png)
 * **Data/Models/Services:** Upload a CSV file with your recent transaction data (Date, Merchant, Category, Amount) with a maximum of 10,000 rows. This project is licensed under the MIT License. The CSV file should be formatted with the following columns: 
- * **Date**: transaction date (YYYY-MM-DD)
- * **Merchant**: The name of the merchant where the transaction occurred
- * **Category**: The spending category (Groceries, Entertainment, Travel, etc)
- * **Amount**: The amount spent on the transaction
+   * Date: transaction date (YYYY-MM-DD)
+   * Merchant: The name of the merchant where the transaction occurred
+   * Category: The spending category (Groceries, Entertainment, Travel, etc)
+   * Amount: The amount spent on the transaction
+ Frontend to visualize: React and CSS for styling (focusing on a green minimalist design)
+ Backend to process: Flask API, Gunicorn, Pandas, Logic for analyzing spending trends
+ Deployment: Docker (containerizing both frontend and backend)
 
----
-
-## **Tech Stack:**
-
-* **Frontend to visualize:**
-
-  * React
-  * CSS for styling (custom styles focusing on a minimalist design)
-
-* **Backend to process:**
-
-  * Flask API (Python web framework)
-  * Gunicorn (WSGI server for Flask)
-  * Pandas (for processing CSV data)
-  * Logic for analyzing spending trends
-
-* **Deployment:**
-
-  * Docker (containerizing both frontend and backend)
 ---
 
 ## **How to Run (Local): Build**
 
-1. Install **Docker** and **Docker Desktop**:
-
+1. Install Docker/ Docker Desktop:
+2. 
    * Download from [Docker](https://www.docker.com/products/docker-desktop).
-   * Follow the installation instructions based on your OS.
 ```bash
 # build
 docker build -t ai-spending-dashboard .
@@ -65,9 +48,9 @@ The react app should be running on `http://localhost:5173`
 
 ---
 ## **Design Decisions:**
-* **Why this concept?** I chose this concept because it aligns with the growing need for financial literacy, especially among students from 1st-generation and low-income households that are new to managing their finances. I considered alternatives such as creating a static web page to provide insights for financial tips on purchases, but decided that this data set dashboard would be more impactful in supporting with long-term spending behavior and visualizations.
-* **Tradeoffs:** Performance concerns may arise with large datasets (100,000+ rows) due to the Pandas being in memory. It's a cost-effective alternative for introductory budget/spending platforms in comparison to purchasing financial management software for bookkeeping and tracking investments.
-* **Security/Privacy:** Long-term data is not stored on the app and is only used to process insights for the user and is deleted after.
+* **Why this concept?** I chose this concept because it aligns with the growing need for financial literacy, especially among students from low-income households who are new to managing their finances. I considered alternatives such as creating a static web page to provide insights for financial tips on purchases. However, decided that this data set dashboard would be more impactful in supporting long-term spending behavior and visualizations.
+* **Tradeoffs:** Performance concerns may arise with large datasets (100,000+ rows) due to the Pandas being in memory. It's a cost-effective alternative to purchasing financial management software for bookkeeping and tracking investments by providing an introductory budget/spending platform.
+* **Security/Privacy:** Long-term data is not stored on the app and is only used to process insights for the user, and is deleted after.
 * **Ops:** Logs are captured for errors in the Flask app; the app could benefit from scaling in case of high traffic, and the app may have performance issues with large CSV files.
 
 
@@ -92,4 +75,5 @@ The react app should be running on `http://localhost:5173`
 
 ## **Links**
 GitHub Repo: https://github.com/xumadison/ai-spending-dashboard.git
-  
+
+
